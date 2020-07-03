@@ -6,11 +6,6 @@ services:
     image: deckofcards
     build:
       context: .
-      dockerfile: deckofcards/Dockerfile
+      dockerfile: Dockerfile
     ports:
       - 80
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://+:80
-    volumes:
-      - ~/.vsdbg:/remote_debugger:rw

@@ -6,6 +6,6 @@ services:
     image: deckofcards
     build:
       context: .
-      dockerfile: deckofcards/Dockerfile
+      dockerfile: Dockerfile
     ports:
       - 80

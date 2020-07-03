@@ -17,13 +17,13 @@ EXPOSE 443
 #
 # Destination is /app/build which is copied to /app later on
 #
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1-bionic AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /src
 COPY ["deckofcards.csproj", "./"]
 RUN dotnet restore "./deckofcards.csproj"
 COPY . .
 WORKDIR "/src/."
-RUN dotnet build "deckofcards.csproj" -c Release -o /app
+RUN dotnet build "deckofcards.csproj" -c Release -o /app/build
 
 #
 # Base image for building React based on Node/Ubuntu
@@ -40,13 +40,13 @@ RUN npm install
 RUN npm run build
 
 #
-# Copy clientbuild:/app/ClientApp to /app/ClientApp
+# Copy clientbuild:/app/ClientApp/build to /clientapp
 #
-# Copy build:/app to /app
+# Copy build:/app/build to /app
 #
-FROM base as final
-WORKDIR /app/ClientApp
-COPY --from=clientbuild /app/ClientApp .
+FROM base AS final
+WORKDIR /clientapp
+COPY --from=clientbuild /app/ClientApp/build .
 WORKDIR /app
-COPY --from=build /app .
-ENTRYPOINT ["dotnet", "deckofcards.dll"]
+COPY --from=build /app/build .
+#ENTRYPOINT ["dotnet", "deckofcards.dll"]
