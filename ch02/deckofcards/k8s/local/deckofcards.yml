@@ -1,0 +1,14 @@
+# pod.yml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: deckofcards-frontend
+  labels:
+    app: deckofcards
+    component: aspnetcore-app
+spec:
+  containers:
+    - name: frontend
+      image: localhost:5000/deckofcards:latest 
+      ports:
+        - containerPort: 80
