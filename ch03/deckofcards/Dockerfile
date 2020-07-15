@@ -1,12 +1,11 @@
 #
 # Base image for deploying and running based on Ubuntu
 #
-# This is to support ASP.NET and does not include .NET SDK or NodeJs
+# Support ASP.NET and does not include .NET SDK or NodeJs
 # 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-bionic AS base
 WORKDIR /app
 EXPOSE 80
-EXPOSE 443
 
 #
 # Base image for building .NET based on Ubuntu
@@ -17,18 +16,23 @@ EXPOSE 443
 #
 # Destination is /app/build which is copied to /app later on
 #
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-bionic AS build
 WORKDIR /src
 COPY ["deckofcards.csproj", "./"]
 RUN dotnet restore "./deckofcards.csproj"
 COPY . .
 WORKDIR "/src/."
-RUN dotnet build "deckofcards.csproj" -c Release -o /app/build
+RUN dotnet build "deckofcards.csproj" -c Release -o /app
+
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-bionic AS debug
+RUN curl --silent --location https://deb.nodesource.com/setup_12.x | bash -
+RUN apt-get install --yes nodejs
+ENTRYPOINT [ "sleep", "infinity" ]
 
 #
 # Base image for building React based on Node/Ubuntu
 #
-# Destination is /app/ClientApp/build which is copied to /clientapp later on
+# Destination is /app/ClientApp/build which is copied to /clientapp later
 #
 # NOTE: npm run build puts the output in the build directory
 #
@@ -38,15 +42,15 @@ COPY ./ClientApp /app/ClientApp
 WORKDIR "/app/ClientApp"
 RUN npm install
 RUN npm run build
-
 #
-# Copy clientbuild:/app/ClientApp/build to /clientapp
+# Copy clientbuild:/app/ClientApp to /app/ClientApp
 #
-# Copy build:/app/build to /app
+# Copy build:/app to /app
 #
-FROM base AS final
-WORKDIR /clientapp
-COPY --from=clientbuild /app/ClientApp/build .
+FROM base as final
+WORKDIR /app/ClientApp
+COPY --from=clientbuild /app/ClientApp .
 WORKDIR /app
-COPY --from=build /app/build .
-#ENTRYPOINT ["dotnet", "deckofcards.dll"]
+COPY --from=build /app .
+ENTRYPOINT ["dotnet", "deckofcards.dll"]
+

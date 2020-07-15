@@ -1,10 +1,8 @@
-using System.IO;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using static DeckOfCards.ReactExtensions;
 
 namespace DeckOfCards
 {
@@ -26,8 +24,7 @@ namespace DeckOfCards
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
-                // configuration.RootPath = "ClientApp/build";
-                configuration.RootPath = GetProductionRootPath("ClientApp/build", "/clientapp");
+                configuration.RootPath = "ClientApp/build";
             });
         }
 
@@ -45,8 +42,7 @@ namespace DeckOfCards
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
-            
+            app.UseStaticFiles();
             app.UseSpaStaticFiles();
 
             app.UseRouting();
@@ -60,13 +56,11 @@ namespace DeckOfCards
 
             app.UseSpa(spa =>
             {
-                // spa.Options.SourcePath = "ClientApp";
-                spa.Options.SourcePath = GetSourcePath("ClientApp", "/clientapp");
+                spa.Options.SourcePath = "ClientApp";
 
                 if (env.IsDevelopment())
                 {
                     spa.UseReactDevelopmentServer();
-                    //spa.UseReactDevelopmentServer(npmScript: "start");
                 }
             });
         }

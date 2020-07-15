@@ -10,46 +10,6 @@ namespace DeckOfCards
     public static class ReactExtensions
     {
 
-        public static string GetSourcePath(string defaultPath, params string[] paths)
-        {
-            CheckIsNotNullOrWhitespace(nameof(defaultPath), defaultPath);
-
-            if (Directory.Exists(defaultPath))
-                return defaultPath;
-
-            if (paths != null && paths.Length > 0)
-            {
-                foreach (var path in paths)
-                {
-                    if (Directory.Exists(path))
-                    {
-                        return path;
-                    }
-                }
-            }
-
-            return defaultPath;
-        }
-
-        public static string GetProductionRootPath(string defaultPath, params string[] paths)
-        {
-            CheckIsNotNullOrWhitespace(nameof(defaultPath), defaultPath);
-
-            if (paths != null && paths.Length > 0)
-            {
-                foreach (var path in paths)
-                {
-                    bool exists = Directory.Exists(path);
-                    if (Directory.Exists(path))
-                    {
-                        return path;
-                    }
-                }
-            }
-
-            return defaultPath;
-        }
-
         /// <summary>
         /// Replacement for the UseReactDevelopmentServer for .NET Core 3.1.x
         /// </summary>

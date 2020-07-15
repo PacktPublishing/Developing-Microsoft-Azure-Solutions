@@ -42,6 +42,7 @@ COPY ./ClientApp /app/ClientApp
 WORKDIR "/app/ClientApp"
 RUN npm install
 RUN npm run build
+
 #
 # Copy clientbuild:/app/ClientApp to /app/ClientApp
 #
