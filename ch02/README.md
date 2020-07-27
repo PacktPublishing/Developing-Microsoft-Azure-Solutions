@@ -1,3 +1,3 @@
 Developing Microsoft Azure Solutions
 
-Welcome To Chapter 1 - Creating a web application using Visual Studio Code 
+Welcome To Chapter 2 - Debugging Locally using Docker and Kubernetes

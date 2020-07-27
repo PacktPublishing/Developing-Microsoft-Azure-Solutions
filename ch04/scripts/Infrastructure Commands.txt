@@ -1,0 +1,32 @@
+# Create Resource Group
+az group create --name rg-sonarqube --location eastus2
+
+# Create Azure Storage Account
+az storage account create --name sasonarqube --resource-group rg-sonarqube --location eastus2 --sku Standard_LRS
+
+# Create Azure File shares
+
+az storage share create --name sonarqubeconfig --account-name sasonarqube
+az storage share create --name sonarqubedata --account-name sasonarqube
+az storage share create --name sonarqubelogs --account-name sasonarqube
+az storage share create --name sonarqubeextensions --account-name sasonarqube
+az storage share create --name caddycerts --account-name sasonarqube
+az storage share create --name caddyconfig --account-name sasonarqube
+
+# Create Azure SQL Database
+
+az sql server create --resource-group rg-sonarqube --name sqlsonarqube --location eastus2 --admin-user sonaradmin --admin-password {SomePassword}
+
+az sql db create --name sonarqubedb --resource-group rg-sonarqube --server sqlsonarqube --service-objective S0 --collation SQL_Latin1_General_CP1_CS_AS
+
+az sql server firewall-rule create --name AzureServices --server sqlsonarqube --resource-group rg-sonarqube --start-ip-address 0.0.0.0 --end-ip-address 0.0.0.0
+
+az deployment group create --name sonarqube --resource-group rg-sonarqube --template-file sonarqube_container.json --parameters storageAccountName=sasonarqube sqlServerName=sqlsonarqube sqlUser=sonaradmin sqlPassword={YourPassword} sqlDbName=sonarqubedb containerGroupName=cisonarqube dockerImage=sonarqube:8.4.1-community
+
+$accountkey=az storage account keys list -n sasonarqube -g rg-sonarqube --query "[?keyName=='key1'].{value:value}" -o tsv  
+
+az storage file upload --account-name sasonarqube --account-key $accountkey --share-name caddyconfig --source Caddyfile
+
+az storage file upload --account-name sasonarqube --account-key $accountkey --share-name sonarqubeconfig --source sonar.properties
+
+az storage file upload --account-name sasonarqube --account-key $accountkey --share-name sonarqubeextensions --source sonar-auth-aad-plugin-1.2.0.jar --path plugins/sonar-auth-aad-plugin-1.2.0.jar
