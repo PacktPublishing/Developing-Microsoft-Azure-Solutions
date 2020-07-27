@@ -30,3 +30,5 @@ az storage file upload --account-name sasonarqube --account-key $accountkey --sh
 az storage file upload --account-name sasonarqube --account-key $accountkey --share-name sonarqubeconfig --source sonar.properties
 
 az storage file upload --account-name sasonarqube --account-key $accountkey --share-name sonarqubeextensions --source sonar-auth-aad-plugin-1.2.0.jar --path plugins/sonar-auth-aad-plugin-1.2.0.jar
+
+az container restart -n cisonarqube -g rg-sonarqube --no-wait   
