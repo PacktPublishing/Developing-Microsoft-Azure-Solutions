@@ -1,0 +1,30 @@
+{
+  "version": 2,
+  "dgSpecHash": "tDOG9/X1VpXkvGkOKRGzomRhV6CZ1QSlFes6r5H8+RfgIpbssmmRf82TW1bbwp0a5c8h30pb40zdWGqK9S9P3Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\RichCrane\\Documents\\GitHub\\Packt\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCardsEntities\\DeckOfCardsEntities.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\RichCrane\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
+    "C:\\Users\\RichCrane\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.2\\microsoft.extensions.configuration.3.1.2.nupkg.sha512",
+    "C:\\Users\\RichCrane\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.2\\microsoft.extensions.configuration.abstractions.3.1.2.nupkg.sha512",
+    "C:\\Users\\RichCrane\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.2\\microsoft.extensions.configuration.binder.3.1.2.nupkg.sha512",
+    "C:\\Users\\RichCrane\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.2\\microsoft.extensions.dependencyinjection.3.1.2.nupkg.sha512",
+    "C:\\Users\\RichCrane\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.2\\microsoft.extensions.dependencyinjection.abstractions.3.1.2.nupkg.sha512",
+    "C:\\Users\\RichCrane\\.nuget\\packages\\microsoft.extensions.logging\\3.1.2\\microsoft.extensions.logging.3.1.2.nupkg.sha512",
+    "C:\\Users\\RichCrane\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.2\\microsoft.extensions.logging.abstractions.3.1.2.nupkg.sha512",
+    "C:\\Users\\RichCrane\\.nuget\\packages\\microsoft.extensions.options\\3.1.2\\microsoft.extensions.options.3.1.2.nupkg.sha512",
+    "C:\\Users\\RichCrane\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.2\\microsoft.extensions.primitives.3.1.2.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\RichCrane\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\RichCrane\\.nuget\\packages\\pineapple\\1.0.16\\pineapple.1.0.16.nupkg.sha512",
+    "C:\\Users\\RichCrane\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\RichCrane\\.nuget\\packages\\system.collections.immutable\\1.7.0\\system.collections.immutable.1.7.0.nupkg.sha512",
+    "C:\\Users\\RichCrane\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
+    "C:\\Users\\RichCrane\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\RichCrane\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\RichCrane\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.0\\system.runtime.compilerservices.unsafe.4.7.0.nupkg.sha512",
+    "C:\\Users\\RichCrane\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.2\\system.threading.tasks.extensions.4.5.2.nupkg.sha512"
+  ],
+  "logs": []
+}
