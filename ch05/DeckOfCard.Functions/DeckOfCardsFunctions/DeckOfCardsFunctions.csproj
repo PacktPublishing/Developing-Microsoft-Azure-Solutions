@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AzureFunctionsVersion>v3</AzureFunctionsVersion>
+    <RootNamespace>DeckOfCards</RootNamespace>
+    <AssemblyName>DeckOfCards..Functions</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Functions\Dependencies\IWorkoutFunctionDepedencies.cs" />
+    <Compile Remove="Functions\Dependencies\WorkoutFunctionDepedencies.cs" />
+    <Compile Remove="Helpers\BlobExtensions.cs" />
+    <Compile Remove="Store\IWorkoutsStore.cs" />
+    <Compile Remove="Store\Workouts.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove=".dockerignore" />
+    <None Remove=".gitignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.4.4" />
+    <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.0.0" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.DurableTask" Version="2.2.2" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.9" />
+    <PackageReference Include="Pineapple" Version="1.0.16" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DeckOfCardsEntities\DeckOfCardsEntities.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deckofcards
+spec:
+  selector:
+    matchLabels:
+      app: deckofcards
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: deckofcards
+    spec:
+      containers:
+      - name: deckofcards
+        image: localhost:6000/deckofcards
+        ports:
+        - containerPort: 5001
+        securityContext:
+          privileged: true
+        volumeMounts:
+        - mountPath: /local
+          name: local
+        resources: {}        
+      volumes:
+      - name: local
+        persistentVolumeClaim:
+          claimName: localvolume
+      hostname: deckofcards
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: localvolume
+  labels:
+    type: local
+spec:
+  storageClassName: manual 
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce 
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: "/mnt/C/mount"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: localvolume
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: manual
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: deckofcards
+spec:
+  type: LoadBalancer
+  ports:
+  - name: http
+    protocol: TCP
+    port: 5001
+    targetPort: 5001
+  selector:
+    app: deckofcards

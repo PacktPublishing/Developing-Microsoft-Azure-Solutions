@@ -1,0 +1,243 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "storageAccountName": {
+            "type": "string",
+            "metadata": {
+                "description": "name of the storage account where file share is created."
+            }
+        },
+        "sqlServerName":{
+            "type": "string",
+            "defaultValue": "db-sonarqube",
+            "metadata": {
+                "description":"name of the server"
+            }
+        },
+        "sqlDbName":{
+            "type": "string",
+            "defaultValue": "db-sonarqube",
+            "metadata": {
+                "description":"name of the database"
+            }
+        },
+        "sqlUser":{
+            "type": "string",
+            "defaultValue": "sonarqubesa",
+            "metadata": {
+                "description":"name of the user"
+            }
+        },
+        "sqlPassword":{
+            "type": "securestring"
+            
+        },
+        "containerGroupName":{
+            "type": "string"      
+        },
+        "dockerImage":{
+            "type": "string"
+        },
+	"dnsName":{
+            "type": "string"
+	}
+    },
+    "variables": {},
+    "resources": [
+        {
+            "name": "[parameters('containerGroupName')]",
+            "type":"Microsoft.ContainerInstance/containerGroups",
+            "apiVersion": "2018-10-01",
+            "location":"[resourceGroup().location]",
+            "properties":{
+                "containers":[
+                    {
+                        "name": "sonarqube",
+                        "properties": {
+                            "image": "[parameters('dockerImage')]",
+                            "ports":[
+                                { 
+                                    "port": 9000,
+                                    "protocol":"TCP"
+                                }
+                            ],
+                            "environmentVariables":[
+                                {
+                                    "name": "SONARQUBE_JDBC_URL",
+                                    "value": "[concat('jdbc:sqlserver://', parameters('sqlServerName'), '.database.windows.net:1433;database=', parameters('sqlDbName'), ';user=', parameters('sqlUser'), '@', parameters('sqlServerName'), ';password=', parameters('sqlPassword'), ';encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;')]"
+                                },
+                                {
+                                    "name": "SONARQUBE_JDBC_USERNAME",
+                                    "value": "[parameters('sqlUser')]"
+                                },
+                                {
+                                    "name": "SONARQUBE_JDBC_PASSWORD",
+                                    "secureValue": "[parameters('sqlPassword')]"
+                                }
+                            ],
+                            "volumeMounts":[
+                                {
+                                    "name": "sonarqube-config",
+                                    "mountPath": "/opt/sonarqube/conf"
+                                },
+                                {
+                                    "name": "sonarqube-data",
+                                    "mountPath": "/opt/sonarqube/data"
+                                },
+                                {
+                                    "name": "sonarqube-logs",
+                                    "mountPath": "/opt/sonarqube/logs"
+                                },
+                                {
+                                    "name": "sonarqube-extensions",
+                                    "mountPath": "/opt/sonarqube/extensions"
+                                }
+                            ],
+                            "resources":{
+                                "requests":{
+                                    "memoryInGB": 4,
+                                    "cpu":2
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "caddyserver",
+                        "properties": {
+                            "command": [
+                                "/usr/bin/caddy",
+                                "--conf",
+                                "/etc/caddyconfig/Caddyfile",
+                                "--log",
+                                "stdout",
+                                "--agree=TRUE"
+                            ],
+                            "image": "abiosoft/caddy",
+                            "ports": [
+                                { 
+                                    "port": 80,
+                                    "protocol":"TCP"
+                                },
+                                { 
+                                    "port": 443,
+                                    "protocol":"TCP"
+                                }
+                            ],
+                            "resources":{
+                                "requests":{
+                                    "memoryInGB": 1.5,
+                                    "cpu":1
+                                }
+                            },
+                            "environmentVariables":[
+                                {
+                                    "name": "CADDYPATH",
+                                    "value": "/etc/caddycerts"
+                                },
+                                {
+                                    "name": "ACME_AGREE",
+                                    "value": "TRUE"
+                                }
+                            ],
+                            "volumeMounts": [
+                                {
+                                    "name": "caddy-config",
+                                    "mountPath": "/etc/caddyconfig",
+                                    "readOnly":false
+                                },
+                                {
+                                    "name": "caddy-certs",
+                                    "mountPath": "/etc/caddycerts",
+                                    "readOnly":false
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "ipAddress":{
+                    "dnsNameLabel": "[parameters('dnsName')]",
+                    "ports":[
+                        {
+                            "port": 80,
+                            "protocol": "TCP"
+                            
+                        },
+                        {
+                            "port": 443,
+                            "protocol": "TCP"  
+                        }
+                    ],
+                    "type": "Public"
+                },
+                "osType":"Linux",
+                "volumes":[
+                    {
+                        "name": "sonarqube-config",
+                        "azureFile":{
+                            "shareName": "sonarqubeconfig",
+                            "storageAccountName": "[parameters('storageAccountName')]",
+                            "storageAccountKey": "[listKeys(resourceId(resourceGroup().name, 'Microsoft.Storage/storageAccounts', parameters('storageAccountName')),'2017-10-01').keys[0].value]",
+                            "readOnly":false
+                        }
+                    },
+                    {
+                        "name": "sonarqube-data",
+                        "azureFile":{
+                            "shareName": "sonarqubedata",
+                            "storageAccountName": "[parameters('storageAccountName')]",
+                            "storageAccountKey": "[listKeys(resourceId(resourceGroup().name, 'Microsoft.Storage/storageAccounts', parameters('storageAccountName')),'2017-10-01').keys[0].value]",
+                            "readOnly":false
+                        }
+                    },
+                    {
+                        "name": "sonarqube-logs",
+                        "azureFile":{
+                            "shareName": "sonarqubelogs",
+                            "storageAccountName": "[parameters('storageAccountName')]",
+                            "storageAccountKey": "[listKeys(resourceId(resourceGroup().name, 'Microsoft.Storage/storageAccounts', parameters('storageAccountName')),'2017-10-01').keys[0].value]",
+                            "readOnly":false
+                        }
+                    },
+                    {
+                        "name": "sonarqube-extensions",
+                        "azureFile":{
+                            "shareName": "sonarqubeextensions",
+                            "storageAccountName": "[parameters('storageAccountName')]",
+                            "storageAccountKey": "[listKeys(resourceId(resourceGroup().name, 'Microsoft.Storage/storageAccounts', parameters('storageAccountName')),'2017-10-01').keys[0].value]",
+                            "readOnly":false
+                        }
+                    },
+                    {
+                        "name": "caddy-certs",
+                        "azureFile": {
+                            "shareName": "caddycerts",
+                            "storageAccountName": "[parameters('storageAccountName')]",
+                            "storageAccountKey": "[listKeys(resourceId(resourceGroup().name, 'Microsoft.Storage/storageAccounts', parameters('storageAccountName')),'2017-10-01').keys[0].value]",
+                            "readOnly":false
+                        }
+                    },
+                    {
+                        "name": "caddy-config",
+                        "azureFile": {
+                            "shareName": "caddyconfig",
+                            "storageAccountName": "[parameters('storageAccountName')]",
+                            "storageAccountKey": "[listKeys(resourceId(resourceGroup().name, 'Microsoft.Storage/storageAccounts', parameters('storageAccountName')),'2017-10-01').keys[0].value]",
+                            "readOnly":false
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "outputs": {
+        "containerIPv4Address": {
+            "type": "string",
+            "value": "[reference(resourceId('Microsoft.ContainerInstance/containerGroups/', parameters('containerGroupName'))).ipAddress.ip]"
+        },
+        "containerFQDN": {
+        "type": "string",
+        "value": "[reference(resourceId('Microsoft.ContainerInstance/containerGroups/', parameters('containergroupname'))).ipAddress.fqdn]"
+      }
+    }
+}

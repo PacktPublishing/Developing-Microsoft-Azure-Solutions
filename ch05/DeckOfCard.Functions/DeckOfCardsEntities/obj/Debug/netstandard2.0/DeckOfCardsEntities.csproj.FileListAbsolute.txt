@@ -1,0 +1,17 @@
+C:\Users\RichCrane\Documents\GitHub\Packt\Developing-Microsoft-Azure-Solutions\ch05\DeckOfCardsEntities\bin\Debug\netstandard2.0\DeckOfCardsEntities.deps.json
+C:\Users\RichCrane\Documents\GitHub\Packt\Developing-Microsoft-Azure-Solutions\ch05\DeckOfCardsEntities\bin\Debug\netstandard2.0\DeckOfCardsEntities.dll
+C:\Users\RichCrane\Documents\GitHub\Packt\Developing-Microsoft-Azure-Solutions\ch05\DeckOfCardsEntities\bin\Debug\netstandard2.0\DeckOfCardsEntities.pdb
+C:\Users\RichCrane\Documents\GitHub\Packt\Developing-Microsoft-Azure-Solutions\ch05\DeckOfCardsEntities\obj\Debug\netstandard2.0\DeckOfCardsEntities.csprojAssemblyReference.cache
+C:\Users\RichCrane\Documents\GitHub\Packt\Developing-Microsoft-Azure-Solutions\ch05\DeckOfCardsEntities\obj\Debug\netstandard2.0\DeckOfCardsEntities.AssemblyInfoInputs.cache
+C:\Users\RichCrane\Documents\GitHub\Packt\Developing-Microsoft-Azure-Solutions\ch05\DeckOfCardsEntities\obj\Debug\netstandard2.0\DeckOfCardsEntities.AssemblyInfo.cs
+C:\Users\RichCrane\Documents\GitHub\Packt\Developing-Microsoft-Azure-Solutions\ch05\DeckOfCardsEntities\obj\Debug\netstandard2.0\DeckOfCardsEntities.csproj.CoreCompileInputs.cache
+C:\Users\RichCrane\Documents\GitHub\Packt\Developing-Microsoft-Azure-Solutions\ch05\DeckOfCardsEntities\obj\Debug\netstandard2.0\DeckOfCardsEntities.dll
+C:\Users\RichCrane\Documents\GitHub\Packt\Developing-Microsoft-Azure-Solutions\ch05\DeckOfCardsEntities\obj\Debug\netstandard2.0\DeckOfCardsEntities.pdb
+C:\Users\RichCrane\Documents\GitHub\Packt\Developing-Microsoft-Azure-Solutions\ch05\DeckOfCard.Functions\DeckOfCardsEntities\bin\Debug\netstandard2.0\DeckOfCardsEntities.deps.json
+C:\Users\RichCrane\Documents\GitHub\Packt\Developing-Microsoft-Azure-Solutions\ch05\DeckOfCard.Functions\DeckOfCardsEntities\bin\Debug\netstandard2.0\DeckOfCardsEntities.dll
+C:\Users\RichCrane\Documents\GitHub\Packt\Developing-Microsoft-Azure-Solutions\ch05\DeckOfCard.Functions\DeckOfCardsEntities\bin\Debug\netstandard2.0\DeckOfCardsEntities.pdb
+C:\Users\RichCrane\Documents\GitHub\Packt\Developing-Microsoft-Azure-Solutions\ch05\DeckOfCard.Functions\DeckOfCardsEntities\obj\Debug\netstandard2.0\DeckOfCardsEntities.AssemblyInfoInputs.cache
+C:\Users\RichCrane\Documents\GitHub\Packt\Developing-Microsoft-Azure-Solutions\ch05\DeckOfCard.Functions\DeckOfCardsEntities\obj\Debug\netstandard2.0\DeckOfCardsEntities.AssemblyInfo.cs
+C:\Users\RichCrane\Documents\GitHub\Packt\Developing-Microsoft-Azure-Solutions\ch05\DeckOfCard.Functions\DeckOfCardsEntities\obj\Debug\netstandard2.0\DeckOfCardsEntities.csproj.CoreCompileInputs.cache
+C:\Users\RichCrane\Documents\GitHub\Packt\Developing-Microsoft-Azure-Solutions\ch05\DeckOfCard.Functions\DeckOfCardsEntities\obj\Debug\netstandard2.0\DeckOfCardsEntities.dll
+C:\Users\RichCrane\Documents\GitHub\Packt\Developing-Microsoft-Azure-Solutions\ch05\DeckOfCard.Functions\DeckOfCardsEntities\obj\Debug\netstandard2.0\DeckOfCardsEntities.pdb

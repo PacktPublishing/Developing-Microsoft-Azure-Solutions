@@ -1,0 +1,8 @@
+# The simplest possible reverse proxy configuration for caddy
+deckofcardssonar.eastus2.azurecontainer.io {
+    proxy / http://localhost:9000 {
+        transparent
+    }
+    # Email to use for ACME verification
+    tls rich@mill5.com
+}

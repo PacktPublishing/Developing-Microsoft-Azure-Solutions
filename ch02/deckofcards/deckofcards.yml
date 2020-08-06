@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deckofcards
+spec:
+  selector:
+    matchLabels:
+      app: deckofcards
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: deckofcards
+    spec:
+      containers:
+      - name: deckofcards
+        image: localhost:6000/deckofcards
+        ports:
+        - containerPort: 5001
+        securityContext:
+          privileged: true
+        volumeMounts:
+        - mountPath: /local
+          name: local
+        resources: {}        
+      volumes:
+      - name: local
+        hostPath:
+          path: /C/Users/RichCrane/Documents/GitHub/Packt/Developing-Microsoft-Azure-Solutions/ch02/deckofcards
+          type: DirectoryOrCreate
+      hostname: deckofcards
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: deckofcards
+spec:
+  type: LoadBalancer
+  ports:
+  - name: http
+    protocol: TCP
+    port: 5001
+    targetPort: 5001
+  selector:
+    app: deckofcards
