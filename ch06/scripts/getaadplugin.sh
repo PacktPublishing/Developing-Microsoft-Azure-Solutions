@@ -1,0 +1,1 @@
+curl -O  "https://github.com/hkamel/sonar-auth-aad/releases/download/1.2.0/sonar-auth-aad-plugin-1.2.0.jar"

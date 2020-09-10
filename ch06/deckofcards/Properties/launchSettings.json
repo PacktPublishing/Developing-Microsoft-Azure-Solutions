@@ -1,0 +1,18 @@
+{
+  "profiles": {
+    "deckofcards": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:5000"
+    },
+    "Local Process with Kubernetes": {
+      "commandName": "AzureDevSpacesLocal",
+      "resourceGroup": "deckofcards-dev",
+      "aksName": "k8sdeckofcardsbook",
+      "subscriptionId": "f6ce8df5-a93e-4dd0-8dd5-a01dd5d8b028"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+# The simplest possible reverse proxy configuration for caddy
+
+dnsname {
+    proxy / http://localhost:9000 {
+        transparent
+    }
+
+    # Email to use for ACME verification
+    tls craigb@mill5.com
+}
+
+
