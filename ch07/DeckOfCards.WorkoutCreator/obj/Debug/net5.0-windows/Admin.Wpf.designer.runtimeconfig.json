@@ -1,0 +1,17 @@
+{
+  "runtimeOptions": {
+    "tfm": "net5.0",
+    "framework": {
+      "name": "Microsoft.WindowsDesktop.App",
+      "version": "5.0.0-rc.1.20452.2"
+    },
+    "additionalProbingPaths": [
+      "C:\\Users\\RichCrane\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\RichCrane\\.nuget\\packages",
+      "C:\\Microsoft\\Xamarin\\NuGet"
+    ],
+    "configProperties": {
+      "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true
+    }
+  }
+}

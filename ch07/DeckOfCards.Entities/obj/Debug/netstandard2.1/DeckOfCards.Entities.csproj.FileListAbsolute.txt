@@ -1,0 +1,9 @@
+C:\Users\RichCrane\OneDrive - MILL5\Documents\GitHub\Personal\Developing-Microsoft-Azure-Solutions\ch07\DeckOfCards.Entities\obj\Debug\netstandard2.1\DeckOfCards.Entities.csprojAssemblyReference.cache
+C:\Users\RichCrane\OneDrive - MILL5\Documents\GitHub\Personal\Developing-Microsoft-Azure-Solutions\ch07\DeckOfCards.Entities\obj\Debug\netstandard2.1\DeckOfCards.Entities.AssemblyInfoInputs.cache
+C:\Users\RichCrane\OneDrive - MILL5\Documents\GitHub\Personal\Developing-Microsoft-Azure-Solutions\ch07\DeckOfCards.Entities\obj\Debug\netstandard2.1\DeckOfCards.Entities.AssemblyInfo.cs
+C:\Users\RichCrane\OneDrive - MILL5\Documents\GitHub\Personal\Developing-Microsoft-Azure-Solutions\ch07\DeckOfCards.Entities\obj\Debug\netstandard2.1\DeckOfCards.Entities.csproj.CoreCompileInputs.cache
+C:\Users\RichCrane\OneDrive - MILL5\Documents\GitHub\Personal\Developing-Microsoft-Azure-Solutions\ch07\DeckOfCards.Entities\bin\Debug\netstandard2.1\DeckOfCards.Entities.deps.json
+C:\Users\RichCrane\OneDrive - MILL5\Documents\GitHub\Personal\Developing-Microsoft-Azure-Solutions\ch07\DeckOfCards.Entities\bin\Debug\netstandard2.1\DeckOfCards.Entities.dll
+C:\Users\RichCrane\OneDrive - MILL5\Documents\GitHub\Personal\Developing-Microsoft-Azure-Solutions\ch07\DeckOfCards.Entities\bin\Debug\netstandard2.1\DeckOfCards.Entities.pdb
+C:\Users\RichCrane\OneDrive - MILL5\Documents\GitHub\Personal\Developing-Microsoft-Azure-Solutions\ch07\DeckOfCards.Entities\obj\Debug\netstandard2.1\DeckOfCards.Entities.dll
+C:\Users\RichCrane\OneDrive - MILL5\Documents\GitHub\Personal\Developing-Microsoft-Azure-Solutions\ch07\DeckOfCards.Entities\obj\Debug\netstandard2.1\DeckOfCards.Entities.pdb

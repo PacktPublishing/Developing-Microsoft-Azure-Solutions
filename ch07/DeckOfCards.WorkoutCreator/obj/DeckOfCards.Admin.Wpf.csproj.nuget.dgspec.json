@@ -1,0 +1,147 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.Admin.Wpf\\DeckOfCards.Admin.Wpf.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.Admin.Wpf\\DeckOfCards.Admin.Wpf.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.Admin.Wpf\\DeckOfCards.Admin.Wpf.csproj",
+        "projectName": "DeckOfCards.Admin.Wpf",
+        "projectPath": "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.Admin.Wpf\\DeckOfCards.Admin.Wpf.csproj",
+        "packagesPath": "C:\\Users\\RichCrane\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.Admin.Wpf\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\RichCrane\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {
+              "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.Entities\\DeckOfCards.Entities.csproj": {
+                "projectPath": "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.Entities\\DeckOfCards.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "MvvmLightLibsStd10": {
+              "target": "Package",
+              "version": "[5.4.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-rc.1.20452.10\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.Entities\\DeckOfCards.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.Entities\\DeckOfCards.Entities.csproj",
+        "projectName": "DeckOfCards.Entities",
+        "projectPath": "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.Entities\\DeckOfCards.Entities.csproj",
+        "packagesPath": "C:\\Users\\RichCrane\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\RichCrane\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "Pineapple": {
+              "target": "Package",
+              "version": "[1.0.16, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-rc.1.20452.10\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
