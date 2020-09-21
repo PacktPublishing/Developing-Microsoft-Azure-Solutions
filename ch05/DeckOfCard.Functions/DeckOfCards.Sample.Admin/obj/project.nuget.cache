@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0VPCceB4XVuqkdf3qWWCcz8A3+PLjK+0AGlm90DzrujAdMLH68R3T/LUL1xazDBEn1Ders2xv2UOrqdqdgE5cg==",
+  "dgSpecHash": "zlZQ0o3hTwlEBAAH90GEO0NWam1mF7uoia1wqOJOC0zmncacB4YcBOE+X42t7cp7FkGvGFFyUxI9wfUJZtDisw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\RichCrane\\Documents\\GitHub\\Packt\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCards.Sample.Admin\\DeckOfCards.Sample.Admin.csproj",
+  "projectFilePath": "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCards.Sample.Admin\\DeckOfCards.Sample.Admin.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\RichCrane\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.2\\microsoft.extensions.configuration.3.1.2.nupkg.sha512",
     "C:\\Users\\RichCrane\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.2\\microsoft.extensions.configuration.abstractions.3.1.2.nupkg.sha512",
@@ -16,7 +16,8 @@
     "C:\\Users\\RichCrane\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\RichCrane\\.nuget\\packages\\pineapple\\1.0.16\\pineapple.1.0.16.nupkg.sha512",
     "C:\\Users\\RichCrane\\.nuget\\packages\\system.collections.immutable\\1.7.0\\system.collections.immutable.1.7.0.nupkg.sha512",
-    "C:\\Users\\RichCrane\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+    "C:\\Users\\RichCrane\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\RichCrane\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],
   "logs": []
 }
