@@ -6,7 +6,7 @@
 	],
 	"settings": {
 		"dataworkspace.projects": [
-			"Leaderboard.sqlproj"
+			"Leaderboard\\Leaderboard.sqlproj"
 		]
 	}
 }
