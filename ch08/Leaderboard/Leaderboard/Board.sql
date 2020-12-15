@@ -1,4 +1,4 @@
-CREATE TABLE [DeckOfCards].[Board]
+CREATE TABLE [dbo].[Board]
 (
   [Id] INT IDENTITY(1,1) NOT NULL,
   [NumOfWorkouts] BIGINT NOT NULL,
@@ -6,4 +6,7 @@ CREATE TABLE [DeckOfCards].[Board]
   CONSTRAINT [PK_Board] PRIMARY KEY CLUSTERED ([Id]),
   FOREIGN KEY ([UserId]) REFERENCES BoardUser([UserID])
 )
-
+GO
+CREATE INDEX [IX_BoardWorkouts]
+ON [dbo].[Board] ([NumOfWorkouts])
+GO
