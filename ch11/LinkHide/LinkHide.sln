@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "LinkHideDb", "LinkHideDb\LinkHideDb.sqlproj", "{E044E5FD-7980-4C05-AFE8-CB403AA46141}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkHide", "LinkHide\LinkHide.csproj", "{7A70B4B0-273A-452D-9FF5-E6F2E81EDC97}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkHide.Entities", "LinkHide.Entities\LinkHide.Entities.csproj", "{04D0EB8C-18A0-4DBB-824B-E9DDD2F4FBD1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkHide.Tests", "LinkHide.Tests\LinkHide.Tests.csproj", "{84548A68-F2C0-4EF4-8298-278C275B5E16}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkHide.Cache", "LinkHide.Cache\LinkHide.Cache.csproj", "{A2B18E7A-E3A1-45DF-A208-337D27B22373}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkHide.Web2", "LinkHide.Web2\LinkHide.Web2.csproj", "{8CBC28B3-D677-4697-8FA1-B0E06D6DC67D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E044E5FD-7980-4C05-AFE8-CB403AA46141}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E044E5FD-7980-4C05-AFE8-CB403AA46141}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E044E5FD-7980-4C05-AFE8-CB403AA46141}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{E044E5FD-7980-4C05-AFE8-CB403AA46141}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E044E5FD-7980-4C05-AFE8-CB403AA46141}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E044E5FD-7980-4C05-AFE8-CB403AA46141}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7A70B4B0-273A-452D-9FF5-E6F2E81EDC97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A70B4B0-273A-452D-9FF5-E6F2E81EDC97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A70B4B0-273A-452D-9FF5-E6F2E81EDC97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A70B4B0-273A-452D-9FF5-E6F2E81EDC97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04D0EB8C-18A0-4DBB-824B-E9DDD2F4FBD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04D0EB8C-18A0-4DBB-824B-E9DDD2F4FBD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04D0EB8C-18A0-4DBB-824B-E9DDD2F4FBD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04D0EB8C-18A0-4DBB-824B-E9DDD2F4FBD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84548A68-F2C0-4EF4-8298-278C275B5E16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84548A68-F2C0-4EF4-8298-278C275B5E16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84548A68-F2C0-4EF4-8298-278C275B5E16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84548A68-F2C0-4EF4-8298-278C275B5E16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2B18E7A-E3A1-45DF-A208-337D27B22373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2B18E7A-E3A1-45DF-A208-337D27B22373}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2B18E7A-E3A1-45DF-A208-337D27B22373}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2B18E7A-E3A1-45DF-A208-337D27B22373}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CBC28B3-D677-4697-8FA1-B0E06D6DC67D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CBC28B3-D677-4697-8FA1-B0E06D6DC67D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CBC28B3-D677-4697-8FA1-B0E06D6DC67D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CBC28B3-D677-4697-8FA1-B0E06D6DC67D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E781AFFC-3C7A-4414-89F6-5DCDF45F9DC5}
+	EndGlobalSection
+EndGlobal

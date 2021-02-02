@@ -1,23 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCards.Sample.Durable\\DeckOfCards.Sample.Durable.csproj": {}
+    "C:\\Users\\RichCrane\\Documents\\GitHub\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCards.Sample.Durable\\DeckOfCards.Sample.Durable.csproj": {}
   },
   "projects": {
-    "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCards.Sample.Durable\\DeckOfCards.Sample.Durable.csproj": {
+    "C:\\Users\\RichCrane\\Documents\\GitHub\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCards.Sample.Durable\\DeckOfCards.Sample.Durable.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCards.Sample.Durable\\DeckOfCards.Sample.Durable.csproj",
+        "projectUniqueName": "C:\\Users\\RichCrane\\Documents\\GitHub\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCards.Sample.Durable\\DeckOfCards.Sample.Durable.csproj",
         "projectName": "DeckOfCards.Sample.Durable",
-        "projectPath": "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCards.Sample.Durable\\DeckOfCards.Sample.Durable.csproj",
+        "projectPath": "C:\\Users\\RichCrane\\Documents\\GitHub\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCards.Sample.Durable\\DeckOfCards.Sample.Durable.csproj",
         "packagesPath": "C:\\Users\\RichCrane\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCards.Sample.Durable\\obj\\",
+        "outputPath": "C:\\Users\\RichCrane\\Documents\\GitHub\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCards.Sample.Durable\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\RichCrane\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +35,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCardsEntities\\DeckOfCardsEntities.csproj": {
-                "projectPath": "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCardsEntities\\DeckOfCardsEntities.csproj"
+              "C:\\Users\\RichCrane\\Documents\\GitHub\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCardsEntities\\DeckOfCardsEntities.csproj": {
+                "projectPath": "C:\\Users\\RichCrane\\Documents\\GitHub\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCardsEntities\\DeckOfCardsEntities.csproj"
               }
             }
           }
@@ -67,35 +70,32 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-rc.1.20452.10\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCardsEntities\\DeckOfCardsEntities.csproj": {
+    "C:\\Users\\RichCrane\\Documents\\GitHub\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCardsEntities\\DeckOfCardsEntities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCardsEntities\\DeckOfCardsEntities.csproj",
+        "projectUniqueName": "C:\\Users\\RichCrane\\Documents\\GitHub\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCardsEntities\\DeckOfCardsEntities.csproj",
         "projectName": "DeckOfCardsEntities",
-        "projectPath": "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCardsEntities\\DeckOfCardsEntities.csproj",
+        "projectPath": "C:\\Users\\RichCrane\\Documents\\GitHub\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCardsEntities\\DeckOfCardsEntities.csproj",
         "packagesPath": "C:\\Users\\RichCrane\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCardsEntities\\obj\\",
+        "outputPath": "C:\\Users\\RichCrane\\Documents\\GitHub\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCardsEntities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\RichCrane\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -147,7 +147,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-rc.1.20452.10\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

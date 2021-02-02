@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+6hvnDmxCjq7yLbF9UWQ9VzdI6wXp5DlyvIex0L+bzFKY7bqzh+Blx5aK6fGLJf0WUtGl66I//uXkjz/dMLLig==",
+  "dgSpecHash": "R34tYGUojpF8XHb6Y1+WEgSUBUNSACZkJbT3aL5We94l7ZrKYUmKZvxCU+O9s/YA8Blh/ladboXtVqMchSw8Fg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCardsEntities\\DeckOfCardsEntities.csproj",
+  "projectFilePath": "C:\\Users\\RichCrane\\Documents\\GitHub\\Developing-Microsoft-Azure-Solutions\\ch05\\DeckOfCard.Functions\\DeckOfCardsEntities\\DeckOfCardsEntities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\RichCrane\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\RichCrane\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.2\\microsoft.extensions.configuration.3.1.2.nupkg.sha512",
@@ -14,8 +14,8 @@
     "C:\\Users\\RichCrane\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.2\\microsoft.extensions.logging.abstractions.3.1.2.nupkg.sha512",
     "C:\\Users\\RichCrane\\.nuget\\packages\\microsoft.extensions.options\\3.1.2\\microsoft.extensions.options.3.1.2.nupkg.sha512",
     "C:\\Users\\RichCrane\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.2\\microsoft.extensions.primitives.3.1.2.nupkg.sha512",
-    "C:\\Users\\RichCrane\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\RichCrane\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\RichCrane\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\RichCrane\\.nuget\\packages\\pineapple\\1.0.16\\pineapple.1.0.16.nupkg.sha512",
     "C:\\Users\\RichCrane\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",

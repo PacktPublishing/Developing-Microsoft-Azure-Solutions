@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>f5d5097b-22ac-4b27-b386-1852fcb61f6f</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Shrinkify.Common</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)AppSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BlobOperations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QueueOperations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ShrinkifyExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ShrinkifyExtensions.Shrink.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ShrinkImage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ShrinkMessage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ShrunkImage.cs" />
+  </ItemGroup>
+</Project>

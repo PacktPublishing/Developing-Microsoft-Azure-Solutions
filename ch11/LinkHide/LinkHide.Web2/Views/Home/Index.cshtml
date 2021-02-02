@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
+<script>
+    function onSubmit(token) {
+        document.getElementById("linkhide-form").submit();
+    }
+</script>
+
+<div class="text-left">
+    <div>
+        <h1>Welcome to LinkHide</h1>
+        <p>Hiding Your Email Address, Phone Number, or Link From the Bots and Spiders</p>
+
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+        {
+            <div role="group" class="form-group input-group input-group-append input-group-lg">
+                <input type="text" class="form-control" aria-required="true" required="required" autocomplete="on" placeholder="Enter an email, phone number, link or text." />
+                <button type="submit" class="btn btn-primary btn-send">Submit</button>
+            </div>
+        }
+        <!--<form action="/home/create" name="linkhide-form" id="linkhide-form" method="post" role="form">
+            <div role="group" class="form-group input-group input-group-append input-group-lg">
+                <input type="text" class="form-control" aria-required="true" required="required" autocomplete="on" placeholder="Enter an email, phone number, link or text." />
+                <button type="submit" class="btn btn-primary btn-send">Submit</button>
+            </div>-->
+
+            @*<div class="form-group">
+                <div class="g-recaptcha" data-sitekey="6LfKURIUAAAAAO50vlwWZkyK_G2ywqE52NU7YO0S" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+                <input class="form-control d-none" data-recaptcha="true" required data-error="Please complete the Captcha">
+                <div class="help-block with-errors"></div>
+            </div>*@
+        <!--</form>-->
+    </div>
+</div>
+
+<div class="text-left">
+    <h1>Features</h1>
+</div>
