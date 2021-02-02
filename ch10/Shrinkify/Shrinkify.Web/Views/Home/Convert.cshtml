@@ -1,0 +1,20 @@
+﻿@model ConvertViewModel
+@{
+    ViewData["Title"] = "Convert Image Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Converting Your Image:</h1>
+    <p>Learn about <a href="https://www.packtpub.com/product/learning-asp-net-core-mvc-programming/9781786463838">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<div>
+    <div class="w-50 mx-auto">
+        <div>
+            <a href="@Model.OriginalImageUrl">Original Image</a>
+        </div>
+        <div>
+            <a href="@Model.NewImageUrl">New Image</a><br/>
+            <p>(Wait a few seconds for the image to process)</p>
+        </div>
+    </div>
+</div>

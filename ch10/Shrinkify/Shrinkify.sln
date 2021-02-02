@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shrinkify.Api", "Shrinkify.Api\Shrinkify.Api.csproj", "{D4075673-64B0-43C7-8AD4-77DD5CEBA714}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shrinkify.Web", "Shrinkify.Web\Shrinkify.Web.csproj", "{4C5DDD16-4572-4CEA-923E-68BDEB8BECA9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shrinkify.Function", "Shrinkify.Function\Shrinkify.Function.csproj", "{390A78D0-8051-4153-90F1-1889F58B38C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shrinkify.Tests", "Shrinkify.Tests\Shrinkify.Tests.csproj", "{5F41C19E-4A5F-4401-86E1-5E3288855AA5}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shrinkify.Common", "Shrinkify.Common\Shrinkify.Common.shproj", "{F5D5097B-22AC-4B27-B386-1852FCB61F6F}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Shrinkify.Common\Shrinkify.Common.projitems*{390a78d0-8051-4153-90f1-1889f58b38c7}*SharedItemsImports = 5
+		Shrinkify.Common\Shrinkify.Common.projitems*{4c5ddd16-4572-4cea-923e-68bdeb8beca9}*SharedItemsImports = 5
+		Shrinkify.Common\Shrinkify.Common.projitems*{5f41c19e-4a5f-4401-86e1-5e3288855aa5}*SharedItemsImports = 5
+		Shrinkify.Common\Shrinkify.Common.projitems*{d4075673-64b0-43c7-8ad4-77dd5ceba714}*SharedItemsImports = 5
+		Shrinkify.Common\Shrinkify.Common.projitems*{f5d5097b-22ac-4b27-b386-1852fcb61f6f}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4075673-64B0-43C7-8AD4-77DD5CEBA714}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4075673-64B0-43C7-8AD4-77DD5CEBA714}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4075673-64B0-43C7-8AD4-77DD5CEBA714}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4075673-64B0-43C7-8AD4-77DD5CEBA714}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C5DDD16-4572-4CEA-923E-68BDEB8BECA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C5DDD16-4572-4CEA-923E-68BDEB8BECA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C5DDD16-4572-4CEA-923E-68BDEB8BECA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C5DDD16-4572-4CEA-923E-68BDEB8BECA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{390A78D0-8051-4153-90F1-1889F58B38C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{390A78D0-8051-4153-90F1-1889F58B38C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{390A78D0-8051-4153-90F1-1889F58B38C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{390A78D0-8051-4153-90F1-1889F58B38C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F41C19E-4A5F-4401-86E1-5E3288855AA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F41C19E-4A5F-4401-86E1-5E3288855AA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F41C19E-4A5F-4401-86E1-5E3288855AA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F41C19E-4A5F-4401-86E1-5E3288855AA5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD68CA95-1502-492B-8380-ABEAFCC09210}
+	EndGlobalSection
+EndGlobal

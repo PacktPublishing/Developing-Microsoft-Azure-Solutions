@@ -85,22 +85,6 @@ namespace DeckOfCards
             return Traversal().WithRemote(new DriverRemoteConnection(_client));
         }
 
-        //private async Task<Container> GetContainer()
-        //{
-
-        //    var databaseResponse = await _client.CreateDatabaseIfNotExistsAsync(DatabaseId);
-        //    databaseResponse.EnsureSuccess();
-
-        //    var database = databaseResponse.Database;
-        //    var containerProperties = new ContainerProperties(ContainerId, partitionKeyPath: "/id");
-
-        //    var containerResponse = await database.CreateContainerIfNotExistsAsync(
-        //        containerProperties,
-        //        throughput: 1000);
-
-        //    return containerResponse.Container;
-        //}
-
         public async Task AddProfile(Profile profile)
         {
             CheckIsNotNull(nameof(profile), profile);
@@ -109,17 +93,17 @@ namespace DeckOfCards
 
             var p = g.AddV(nameof(Profile));
 
-            p.Property(nameof(profile.UserId), profile.UserId)
-             .Property(nameof(profile.FirstName), profile.FirstName)
-             .Property(nameof(profile.LastName), profile.LastName);
+            p.Property(nameof(profile.UserId).ToLower(), profile.UserId)
+             .Property(nameof(profile.FirstName).ToLower(), profile.FirstName)
+             .Property(nameof(profile.LastName).ToLower(), profile.LastName);
 
-            p.AddV(nameof(profile.Location))
-             .Property(nameof(profile.Location.City), profile.Location.City)
-             .Property(nameof(profile.Location.State), profile.Location.State);
+            p.AddV(nameof(profile.Location).ToLower())
+             .Property(nameof(profile.Location.City).ToLower(), profile.Location.City)
+             .Property(nameof(profile.Location.State).ToLower(), profile.Location.State);
 
-            p.AddV(nameof(profile.Favorite))
-             .Property(nameof(profile.Favorite.Name), profile.Favorite.Name)
-             .Property(nameof(profile.Favorite.WorkoutId), profile.Favorite.WorkoutId);
+            p.AddV(nameof(profile.Favorite).ToLower())
+             .Property(nameof(profile.Favorite.Name).ToLower(), profile.Favorite.Name)
+             .Property(nameof(profile.Favorite.WorkoutId).ToLower(), profile.Favorite.WorkoutId);
 
             await Task.CompletedTask;
         }
@@ -127,13 +111,14 @@ namespace DeckOfCards
         public async Task<Profile> GetProfile(Guid id)
         {
             return await Task.FromResult<Profile>(null);
-            //CheckIsNotNull(nameof(id), id);
 
-            //string idToFind = id.ToString();
+            var g = GetTraversalSource();
 
-            //var container = await GetContainer();
-            
-            //return await container.ReadItemAsync<Profile>(idToFind, new PartitionKey(idToFind));
+            var p = g.V().HasLabel("Profile").HasId(id);
+
+            var userid = p.Property()
+
+            return g;
         }
     }
 }

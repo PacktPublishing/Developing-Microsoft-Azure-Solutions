@@ -1,8 +1,10 @@
-﻿using Microsoft.Azure.Cosmos;
+﻿#region usings
+using Microsoft.Azure.Cosmos;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Threading.Tasks;
 using static Pineapple.Common.Preconditions;
+#endregion
 
 namespace DeckOfCards
 {
@@ -11,9 +13,11 @@ namespace DeckOfCards
         private const string DatabaseId = "DeckOfCards";
         private const string ContainerId = "Profile";
 
+#region variables
         private static readonly string _endpoint;
         private static readonly string _authKey;
         private readonly CosmosClient _client;
+#endregion
 
         static ProfileContext()
         {
@@ -34,6 +38,7 @@ namespace DeckOfCards
             _client = new CosmosClient(_endpoint, _authKey);
         }
 
+#region 
         ~ProfileContext()
         {
             DisposeInternal();
@@ -49,6 +54,7 @@ namespace DeckOfCards
         {
             _client.Dispose();
         }
+#endregion
 
         private async Task<Container> GetContainer()
         {
