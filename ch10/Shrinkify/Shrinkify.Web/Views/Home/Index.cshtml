@@ -9,12 +9,16 @@
 </div>
 <div class="row">
     <div class="w-75 mx-auto">
-        @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { id = "FileUploadForm", @class = "col-xs-12 w-75 mx-auto", enctype = "multipart/form-data" }))
+        @using (Html.BeginForm("Index", "Home",
+                               FormMethod.Post,
+                               new { id = "FileUploadForm",
+                                     @class = "col-xs-12 w-75 mx-auto",
+                                     enctype = "multipart/form-data"}))
         {
             <div class="form-group">
                 <div class="custom-file">
-                    <label for="imageUpload" class="custom-file-label">Choose File...</label>
-                    <input id="imageUpload" asp-for="Upload.Image" type="file" class="form-control-file custom-file-input" required>
+                    <label id="imageUploadLabel" for="imageUpload" class="custom-file-label">Choose File...</label>
+                    <input id="imageUpload" onchange="updatefile(this);" accept="image/jpeg,image/png" asp-for="Upload.Image" type="file" class="form-control-file custom-file-input" required>
                 </div>
             </div>
 
@@ -30,3 +34,5 @@
 <div class="text-center">
     <p>Only upload JPEG (.jpg|.jpeg) or PNG (.png) files are accepted.</p>
 </div>
+
+<script type="text/javascript" src="~/js/filechange.js"></script>

@@ -4,17 +4,41 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Converting Your Image:</h1>
+    <h1 class="display-4" id="heading">Converting Your Image:</h1>
     <p>Learn about <a href="https://www.packtpub.com/product/learning-asp-net-core-mvc-programming/9781786463838">building Web apps with ASP.NET Core</a>.</p>
-</div>
-<div>
-    <div class="w-50 mx-auto">
-        <div>
-            <a href="@Model.OriginalImageUrl">Original Image</a>
-        </div>
-        <div>
-            <a href="@Model.NewImageUrl">New Image</a><br/>
-            <p>(Wait a few seconds for the image to process)</p>
-        </div>
+    <div>
+        <img src="/images/processing.gif" id="output" style="max-width:500px;max-height:500px;"/>
     </div>
 </div>
+
+<script type="text/javascript">
+    window.onload = (event) => {
+        var output = document.getElementById('output');
+
+        output.onload = function () {
+            var heading = document.getElementById('heading');
+            heading.innerHTML = 'Converted Your Image';
+        };
+
+        output.onerror = function () {
+            var url = '@Model.NewImageUrl' + '?' + new Date().getTime();
+            output.src = url;
+        };
+
+        fetch('wait',
+            {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ Image: '@Model.Folder' })
+            })
+            .then(resp => {
+                var output = document.getElementById('output');
+
+                var url = '@Model.NewImageUrl' + '?' + new Date().getTime();
+                output.src = url;
+            });
+    };
+</script>

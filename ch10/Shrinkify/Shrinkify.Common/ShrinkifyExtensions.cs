@@ -80,7 +80,7 @@ namespace Shrinkify
         public static void EnsureDelete(this FileInfo file, bool removeTmp = true)
         {
             if (file.Exists)
-                file.Delete();
+                SafeMethod(() => file.Delete());
 
             if (removeTmp)
             {
@@ -89,7 +89,7 @@ namespace Shrinkify
                 var tempFile = new FileInfo(fileName);
 
                 if (tempFile.Exists)
-                    tempFile.Delete();
+                    SafeMethod(() => tempFile.Delete());
             }
         }
 

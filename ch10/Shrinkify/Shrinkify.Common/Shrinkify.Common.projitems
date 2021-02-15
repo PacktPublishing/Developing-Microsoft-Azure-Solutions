@@ -11,6 +11,8 @@
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)AppSettings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BlobOperations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ServiceBusOperations.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ServiceBusWaitAndCheck.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)QueueOperations.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ShrinkifyExtensions.cs" />

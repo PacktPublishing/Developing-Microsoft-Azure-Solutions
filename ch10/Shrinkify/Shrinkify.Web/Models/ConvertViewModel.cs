@@ -11,6 +11,7 @@ namespace Shrinkify.Web.Models
         {
         }
 
+        public string Folder { get; set; }
         public string OriginalImageUrl { get; set; }
 
         public string NewImageUrl { get; set; }

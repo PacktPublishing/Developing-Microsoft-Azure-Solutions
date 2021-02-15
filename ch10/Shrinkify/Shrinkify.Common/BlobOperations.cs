@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
@@ -87,7 +88,12 @@ namespace Shrinkify
                 await blob.UploadAsync(fileStream, o);
             }
 
-            return blob.Uri;
+            return ReturnUri(blob.Uri);
+        }
+
+        private static Uri ReturnUri(Uri url)
+        {
+            return new Uri(url.ToString().Replace("%2F", "/"));
         }
 
         public static async Task DeleteBlobAsync(string connectionString,
@@ -100,6 +106,28 @@ namespace Shrinkify
 
             var blob = new BlobClient(connectionString, containerName, fileName);
             await blob.DeleteIfExistsAsync(DeleteSnapshotsOption.IncludeSnapshots);
+        }
+
+        public static async Task<bool> FileOrFolderExists(string connectionString, string containerName, string fileOrFolder)
+        {
+            CheckIsNotNullOrWhitespace(nameof(connectionString), connectionString);
+            CheckIsNotNullOrWhitespace(nameof(containerName), containerName);
+            CheckIsNotNullOrWhitespace(nameof(fileOrFolder), fileOrFolder);
+
+            var serviceClient = new BlobServiceClient(connectionString);
+            var containerClient = serviceClient.GetBlobContainerClient(containerName);
+
+            var pages = containerClient
+                .GetBlobsByHierarchyAsync(prefix: fileOrFolder, delimiter: "/")
+                .AsPages();
+
+            await foreach (var p in pages)
+            {
+                if (p.Values.Count > 0)
+                    return true;
+            }
+
+            return false;
         }
 
         public static List<string> GetBlobNames(string connectionString, string containerName)

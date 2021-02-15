@@ -57,7 +57,7 @@ namespace Shrinkify
                     shrunkUri = await UploadBlobAsync(settings.StorageAccount, "images", $"{image.Folder}/{shrunkFile.Name}", stream, contentType: "image/webp");
                 }
 
-                result = new ShrunkImage(image.ImageUrl, shrunkUri.ToString());
+                result = new ShrunkImage(image.ImageUrl, shrunkUri.ToString(), image.Folder);
             }
             finally
             {
