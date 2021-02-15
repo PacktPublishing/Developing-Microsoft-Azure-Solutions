@@ -10,6 +10,7 @@ using static Pineapple.Common.Preconditions;
 using static Shrinkify.ShrinkifyExtensions;
 using static Shrinkify.BlobOperations;
 using static Shrinkify.QueueOperations;
+using System.Net;
 
 namespace Shrinkify.Web.Controllers
 {
@@ -19,6 +20,11 @@ namespace Shrinkify.Web.Controllers
         {
 
         }
+    }
+
+    public class WaitForImage
+    {
+        public string Image { get; set; }
     }
 
     public class HomeController : Controller
@@ -36,6 +42,31 @@ namespace Shrinkify.Web.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        [HttpPost("wait")]
+        public async Task WaitForImage([FromBody] WaitForImage waitForImage)
+        {
+            CheckIsNotNull(nameof(waitForImage), waitForImage);
+
+            Func<Task<bool>> check = async () =>
+            {
+                return await FileOrFolderExists(_d.Settings.StorageAccount, "images", waitForImage.Image);
+            };
+
+            try
+            {
+                await using (var sb = new ServiceBusWaitAndCheck(_d.Settings.ServiceBusAccount, "notifications", Guid.NewGuid().ToString(), waitForImage.Image, check))
+                {
+                    _d.Logger.LogDebug("Entering wait for image.");
+                    await sb.WaitAsync();
+                }
+            }
+            catch (Exception ex)
+            {
+                _d.Logger.LogError(ex.Message);
+                // DO NOT RETHROW
+            }
         }
 
         [HttpPost]
@@ -59,6 +90,7 @@ namespace Shrinkify.Web.Controllers
 
                 if (image.Length > 0)
                 {
+                    // Removed for brevity
                     using (var stream = image.OpenReadStream())
                     {
                         imageUri = await UploadBlobAsync(_d.Settings.StorageAccount, "images", $"{folder}/{imageShortName}", stream, image.ContentType);
@@ -66,14 +98,17 @@ namespace Shrinkify.Web.Controllers
 
                     var shrinkMessage = new ShrinkMessage { Image = new ShrinkImage(folder, imageShortName, $"{imageUri}") };
 
-                    await SendMessage(_d.Settings.StorageAccount, "shrink", shrinkMessage);
+                    await SendMessageAsync(_d.Settings.StorageAccount, "shrink", shrinkMessage);
                 }
 
-                return View("Convert", new ConvertViewModel
+                var vm = new ConvertViewModel
                 {
+                    Folder = folder,
                     OriginalImageUrl = imageUri.ToString(),
                     NewImageUrl = imageUri.ToString().Replace(imageExt, ".webp")
-                });
+                };
+
+                return View("Convert", vm);
             }
             catch (Exception ex)
             {

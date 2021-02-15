@@ -9,7 +9,7 @@ namespace Shrinkify
 {
     public static class QueueOperations
     {
-        public static async Task SendMessage<T>(string connectionString, string queueName, T message) where T: class
+        public static async Task SendMessageAsync<T>(string connectionString, string queueName, T message) where T: class
         {
             CheckIsNotNullOrWhitespace(nameof(connectionString), connectionString);
             CheckIsNotNullOrWhitespace(nameof(queueName), queueName);
@@ -27,9 +27,16 @@ namespace Shrinkify
             return Convert.ToBase64String(plainTextBytes);
         }
 
-        public static T DeserializeMessage<T>(string message)
+        public static T DeserializeMessageFromAzureFunction<T>(string message)
         {
             return JsonConvert.DeserializeObject<T>(message);
+        }
+
+        public static T DeserializeMessage<T>(string message)
+        {
+            var bytes = Convert.FromBase64String(message);
+            var s = Encoding.UTF8.GetString(bytes);
+            return DeserializeMessageFromAzureFunction<T>(s);
         }
     }
 }

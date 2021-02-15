@@ -4,7 +4,9 @@ using Microsoft.Azure.WebJobs;
 using Microsoft.Extensions.Logging;
 using static Shrinkify.ShrinkifyExtensions;
 using static Shrinkify.QueueOperations;
+using static Shrinkify.ServiceBusOperations;
 using static Pineapple.Common.Preconditions;
+using System.Diagnostics;
 
 namespace Shrinkify
 {
@@ -29,21 +31,29 @@ namespace Shrinkify
         [FunctionName("Shrink")]
         public async Task Run([QueueTrigger("shrink", Connection = "SHRINKIFYSTORAGEACCOUNT")]string queueMessage, ILogger log)
         {
+            const int TIMELINESS = 5;
+
             log.LogInformation($"C# Queue trigger function processed: {queueMessage}");
 
             try
             {
-                var shrinkMessage = DeserializeMessage<ShrinkMessage>(queueMessage);
+                var shrinkMessage = DeserializeMessageFromAzureFunction<ShrinkMessage>(queueMessage);
 
-                await ShrinkImageAsync(shrinkMessage.Image, _d.Settings);
+                // IGNORE OLD MESSAGES
+                if (shrinkMessage.When.AddMinutes(TIMELINESS) < DateTimeOffset.UtcNow)
+                {
+                    var shrunkImage = await ShrinkImageAsync(shrinkMessage.Image, _d.Settings);
+
+                    Debug.WriteLine($"Sending message [{shrunkImage.ShrunkImageUrl}]");
+
+                    await SendMessageAsync(_d.Settings.ServiceBusAccount, "notifications", shrunkImage, subscriptionFilter: shrunkImage.Folder);
+
+                    Debug.WriteLine($"Sent message [{shrunkImage.ShrunkImageUrl}]");
+                }
             }
             catch (Exception ex)
             {
                 log.LogError(ex.Message);
-            }
-            finally
-            {
-                // TODO: Send to user who is waiting for the image (HMM:  SignalR???)
             }
         }
     }

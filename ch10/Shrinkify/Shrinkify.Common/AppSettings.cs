@@ -8,6 +8,7 @@ namespace Shrinkify
     {
 
         private const string SHRINKIFYSTORAGEACCOUNT = "SHRINKIFYSTORAGEACCOUNT";
+        private const string SHRINKIFYSERVICEBUSACCOUNT = "SHRINKIFYSERVICEBUSACCOUNT";
 
         public AppSettings(IConfiguration configuration)
         {
@@ -15,8 +16,13 @@ namespace Shrinkify
 
             StorageAccount = configuration[SHRINKIFYSTORAGEACCOUNT];
             CheckIsNotNull(nameof(SHRINKIFYSTORAGEACCOUNT), StorageAccount);
+
+            ServiceBusAccount = configuration[SHRINKIFYSERVICEBUSACCOUNT];
+            CheckIsNotNull(nameof(SHRINKIFYSERVICEBUSACCOUNT), ServiceBusAccount);
         }
 
         public string StorageAccount { get; set; }
+
+        public string ServiceBusAccount { get; set; }
     }
 }

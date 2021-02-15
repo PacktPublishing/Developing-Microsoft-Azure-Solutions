@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RunSettings>
+	<RunConfiguration>
+		<EnvironmentVariables>
+			<!-- List of environment variables we want to set-->
+			<SHRINKIFYSTORAGEACCOUNT>DefaultEndpointsProtocol=https;AccountName=shrinkifystoragedev;AccountKey=CQYRquvILsyq2a45AEzig0idd3rQd1UL8Rj5uZaLZwsnzS9N7KorriVbe5GtWZolRqe4Z107CZO3KKUKU5qSWA==;EndpointSuffix=core.windows.net</SHRINKIFYSTORAGEACCOUNT>
+			<SHRINIFYSERVICEBUSACCOUNT>Endpoint=sb://shrinkifysbdev.servicebus.windows.net/;SharedAccessKeyName=ShrinkifyAccessKey;SharedAccessKey=7rxIukhEipX+Ov3HrbgwLyPUg8w0aNC4O3BEqlj+aWI=</SHRINIFYSERVICEBUSACCOUNT>
+		</EnvironmentVariables>
+	</RunConfiguration>
+</RunSettings>
