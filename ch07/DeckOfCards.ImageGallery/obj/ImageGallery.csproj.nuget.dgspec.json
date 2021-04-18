@@ -1,26 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.ImageGallery\\ImageGallery.csproj": {}
+    "C:\\Users\\RichCrane\\Documents\\GitHub\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.ImageGallery\\ImageGallery.csproj": {}
   },
   "projects": {
-    "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.Entities\\Entities.csproj": {
+    "C:\\Users\\RichCrane\\Documents\\GitHub\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\RichCrane\\Documents\\GitHub\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.Entities\\Entities.csproj",
         "projectName": "DeckOfCards.Entities",
-        "projectPath": "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\RichCrane\\Documents\\GitHub\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\RichCrane\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.Entities\\obj\\",
+        "outputPath": "C:\\Users\\RichCrane\\Documents\\GitHub\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.Entities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\RichCrane\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WinForms.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WPF.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,7 +31,7 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet5/nuget/v3/index.json": {}
+          "https://nuget.telerik.com/nuget": {}
         },
         "frameworks": {
           "netstandard2.1": {
@@ -49,11 +51,11 @@
           "dependencies": {
             "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[12.0.3, )"
+              "version": "[13.0.1, )"
             },
             "Pineapple": {
               "target": "Package",
-              "version": "[1.0.16, )"
+              "version": "[1.0.30, )"
             }
           },
           "imports": [
@@ -71,27 +73,29 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200-preview.20601.7\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.ImageGallery\\ImageGallery.csproj": {
+    "C:\\Users\\RichCrane\\Documents\\GitHub\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.ImageGallery\\ImageGallery.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.ImageGallery\\ImageGallery.csproj",
+        "projectUniqueName": "C:\\Users\\RichCrane\\Documents\\GitHub\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.ImageGallery\\ImageGallery.csproj",
         "projectName": "DeckOfCards.ImageGallery",
-        "projectPath": "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.ImageGallery\\ImageGallery.csproj",
+        "projectPath": "C:\\Users\\RichCrane\\Documents\\GitHub\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.ImageGallery\\ImageGallery.csproj",
         "packagesPath": "C:\\Users\\RichCrane\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.ImageGallery\\obj\\",
+        "outputPath": "C:\\Users\\RichCrane\\Documents\\GitHub\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.ImageGallery\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Progress\\ToolboxNuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
           "C:\\Users\\RichCrane\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WinForms.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Telerik UI for WPF.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -100,14 +104,14 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {},
-          "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet5/nuget/v3/index.json": {}
+          "https://nuget.telerik.com/nuget": {}
         },
         "frameworks": {
           "net5.0-windows7.0": {
             "targetAlias": "net5.0-windows",
             "projectReferences": {
-              "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\RichCrane\\OneDrive - MILL5\\Documents\\GitHub\\Personal\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.Entities\\Entities.csproj"
+              "C:\\Users\\RichCrane\\Documents\\GitHub\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\RichCrane\\Documents\\GitHub\\Developing-Microsoft-Azure-Solutions\\ch07\\DeckOfCards.Entities\\Entities.csproj"
               }
             }
           }
@@ -124,23 +128,23 @@
           "dependencies": {
             "AsyncAwaitBestPractices.MVVM": {
               "target": "Package",
-              "version": "[4.3.0, )"
+              "version": "[5.1.0, )"
             },
             "Azure.Storage.Blobs": {
               "target": "Package",
-              "version": "[12.6.0, )"
+              "version": "[12.8.1, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
-              "version": "[5.0.0-rc.1.20451.14, )"
+              "version": "[5.0.0, )"
             },
             "Microsoft.Extensions.Configuration.FileExtensions": {
               "target": "Package",
-              "version": "[5.0.0-rc.1.20451.14, )"
+              "version": "[5.0.0, )"
             },
             "Microsoft.Extensions.Configuration.Json": {
               "target": "Package",
-              "version": "[5.0.0-rc.1.20451.14, )"
+              "version": "[5.0.0, )"
             },
             "MvvmLightLibsStd10": {
               "target": "Package",
@@ -148,7 +152,7 @@
             },
             "Pineapple": {
               "target": "Package",
-              "version": "[1.0.16, )"
+              "version": "[1.0.30, )"
             }
           },
           "imports": [
@@ -169,7 +173,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200-preview.20601.7\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
