@@ -2,7 +2,7 @@ using Microsoft.Extensions.DependencyInjection;
 using static Pineapple.Common.Preconditions;
 using static Pineapple.Extensions.ServiceCollectionExtensions;
 
-namespace DeckOfCards
+namespace Leaderboard
 {
     public static class RegisterAssembly
     {
@@ -18,7 +18,6 @@ namespace DeckOfCards
                 return;
 
             services.Configure<FunctionsConfigured>();
-
         }
     }
 }

@@ -4,7 +4,7 @@ using System.IO;
 using System.Threading.Tasks;
 using static Pineapple.Common.Preconditions;
 
-namespace DeckOfCards
+namespace Leaderboard
 {
     internal static class FunctionExtensions
     {

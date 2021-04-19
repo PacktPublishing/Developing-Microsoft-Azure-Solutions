@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "LeaderboardFunction": {
+      "commandName": "Project",
+      "commandLineArgs": "--csharp",
+      "environmentVariables": {
+        "LeaderboardDb": "Data Source=leaderboard-dmas.database.windows.net;Initial Catalog=leaderboard;Persist Security Info=True;User ID=myadminuser;Password=MyAdminP@ssw0rd"
+      }
+    }
+  }
+}

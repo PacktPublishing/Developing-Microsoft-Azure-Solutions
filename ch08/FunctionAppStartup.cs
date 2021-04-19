@@ -1,8 +1,8 @@
 using Microsoft.Azure.Functions.Extensions.DependencyInjection;
 
-[assembly: FunctionsStartup(typeof(DeckOfCards.FunctionAppStartup))]
+[assembly: FunctionsStartup(typeof(Leaderboard.FunctionAppStartup))]
 
-namespace DeckOfCards
+namespace Leaderboard
 {
     public class FunctionAppStartup : FunctionsStartup
     {

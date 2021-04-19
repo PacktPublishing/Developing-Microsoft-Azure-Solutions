@@ -13,11 +13,11 @@ using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using static Pineapple.Common.Preconditions;
 
-namespace DeckOfCards.Leaderboard
+namespace Leaderboard
 {
     public class LeaderboardFunction
     {
-        private IFunctionDependencies _d;
+        private readonly IFunctionDependencies _d;
 
         public LeaderboardFunction(IFunctionDependencies d)
         {
@@ -36,5 +36,39 @@ namespace DeckOfCards.Leaderboard
 
             return new JsonResult(topTen);
         }
+
+
+        [FunctionName("InsertIntoLeaderboard")]
+        public async Task InsertIntoLeaderboard(
+            [HttpTrigger(AuthorizationLevel.Function, "post", Route = null)] HttpRequest req,
+            ILogger log)
+        {
+            log.LogInformation("Insert Into Leaderboard");
+
+            try
+            {
+                var e = await req.Deserialize<BoardEntry>();
+
+                var board = new Board { UserId = e.UserId, NumOfWorkouts = e.NumOfWorkouts };
+                var boardUser = new BoardUser
+                {
+                    UserId = e.UserId,
+                    Email = e.Email,
+                    LastWorkout = e.LastWorkout,
+                    Name = e.Name
+                };
+
+                boardUser.Boards.Add(board);
+
+                await _d.Store.BoardUsers.AddAsync(boardUser);
+                await _d.Store.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                log.LogError(ex, nameof(InsertIntoLeaderboard));
+                throw;
+            }
+        }
+
     }
 }
