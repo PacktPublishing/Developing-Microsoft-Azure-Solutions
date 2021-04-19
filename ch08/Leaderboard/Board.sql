@@ -1,0 +1,8 @@
+CREATE TABLE [dbo].[Board]
+(
+  [Id] INT IDENTITY(1,1) NOT NULL,
+  [NumOfWorkouts] INT NOT NULL,
+  [UserId] INT NOT NULL,
+  CONSTRAINT [PK_Board] PRIMARY KEY CLUSTERED ([Id]),
+  FOREIGN KEY ([UserId]) REFERENCES BoardUser([UserId])
+)

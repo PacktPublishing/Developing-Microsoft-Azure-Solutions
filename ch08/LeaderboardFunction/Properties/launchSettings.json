@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "LeaderboardFunction": {
+      "commandName": "Project",
+      "executablePath": "func",
+      "commandLineArgs": "start --csharp",
+      "nativeDebugging": true
+    }
+  }
+}

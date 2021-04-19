@@ -1,8 +1,11 @@
 using static Pineapple.Common.Preconditions;
-
 namespace Leaderboard
 {
-
+    public interface IFunctionDependencies
+    {
+        LeaderboardContext Store { get; }
+    }
+    
     internal class FunctionDepedencies : IFunctionDependencies
     {
         public FunctionDepedencies(LeaderboardContext store)

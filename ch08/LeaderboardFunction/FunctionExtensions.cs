@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Http;
+using Microsoft.Azure.Functions.Worker.Http;
 using Newtonsoft.Json;
 using System.IO;
 using System.Threading.Tasks;
@@ -8,7 +8,7 @@ namespace Leaderboard
 {
     internal static class FunctionExtensions
     {
-        public static async Task<T> Deserialize<T>(this HttpRequest req)
+        public static async Task<T> Deserialize<T>(this HttpRequestData req)
         {
             CheckIsNotNull(nameof(req), req);
 
