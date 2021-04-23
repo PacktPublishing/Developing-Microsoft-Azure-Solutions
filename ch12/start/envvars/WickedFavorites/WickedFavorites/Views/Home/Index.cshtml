@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about building applications that use Azure Key Vault and Managed Identity.</p>
+
+
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Category</th>
+                <th scope="col">Name</th>
+                <th scope="col">Url</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{ 
+                int i = 0;
+
+                @foreach (var f in @Model)
+                {
+                    i++;
+
+                    <tr>
+                        <th scope="row">@i</th>
+                        <td>@f.Category</td>
+                        <td>@f.Name</td>
+                        <td><a href="@f.Url">Click here</a></td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

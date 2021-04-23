@@ -1,0 +1,25 @@
+{
+  "profiles": {
+    "WickedFavorites": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation",
+        "WickedFavoritesDb": "Data Source=wickedfavorites.database.windows.net;Initial Catalog=wickedfavoritesdb;Persist Security Info=True;User ID=wicked;Password=PasswordForTheBook!"
+      },
+      "dotnetRunMessages": "true",
+      "applicationUrl": "https://localhost:5001;http://localhost:5000"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "publishAllPorts": true,
+      "useSSL": true,
+      "environmentVariables": {
+        "WickedFavoritesDb": "Data Source=wickedfavorites.database.windows.net;Initial Catalog=wickedfavoritesdb;Persist Security Info=True;User ID=wicked;Password=PasswordForTheBook!"
+      }
+    }
+  }
+}

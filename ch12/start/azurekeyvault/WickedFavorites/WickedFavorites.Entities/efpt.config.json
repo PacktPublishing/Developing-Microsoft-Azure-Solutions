@@ -1,0 +1,40 @@
+﻿{
+   "CodeGenerationMode": 0,
+   "ContextClassName": "FavoritesContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": null,
+   "ProceduresReturnList": false,
+   "ProjectRootNamespace": "Wicked.Favorites",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[Wicked].[Category]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[Wicked].[Favorite]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "Wicked.Favorites.wickedfavoritesdb",
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseNoConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSpatial": false
+}

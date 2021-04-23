@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "WickedFavoritesDb",
+      "suggestion": "true",
+      "ignored": "true"
+    }
+  }
+}
